@@ -1,16 +1,21 @@
 import React, { Component, PropTypes } from 'react';
-
-class MultiModulesDemo extends Component {
-	
+class RandomTest extends Component {
+  static PropTypes = {
+    h1: PropTypes.string,
+    h2: PropTypes.string,
+  }
   render(){
-	  
+    let {
+      h2 = 'sup this a github edit',
+    } = this.props;
+    let {
+      flux, config
+    } = this.context;
     return (
-      <div className='FranklyModulesDemo'>
-	      <h2 className='demo_text'>nad2: {this.props.text}</h2>
+      <div>
+        <h2>{h2}</h2>
       </div>
     );
-	  
   }
 }
-
-export default ModuleDemo;
+export default RandomTest;
